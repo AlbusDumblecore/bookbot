@@ -8,7 +8,7 @@ def main():
        counter +=1
     print(counter)
     
-    liste_minuscule = liste_mots.lower()
+    liste_minuscule = file_contents.lower()
     listing_lettres = {}
     for mots in liste_minuscule:
         for character in mots:
