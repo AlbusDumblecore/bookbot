@@ -22,8 +22,13 @@ def main():
 
     liste_finale = []
     for clés in dict_final:        
-        liste_finale.append({clés:dict_final[clés]})
-    print (liste_finale)   
+        liste_finale.append({"lettre":clés,"occurences":dict_final[clés]})
+    
+    def sort_on(dict):
+     return dict["occurences"] 
+    
+    liste_finale.sort(reverse=True, key=sort_on)
+    print(liste_finale)
 
 
 
