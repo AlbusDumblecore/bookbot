@@ -28,9 +28,15 @@ def main():
      return dict["occurences"] 
     
     liste_finale.sort(reverse=True, key=sort_on)
-    print(liste_finale)
-
-
+    
+    print("--- Nerd statistics about books/frankenstein.txt --- ")
+    print("")
+    print(f"The document contains {counter} words")
+    print("")
+    for elements in liste_finale:
+        print(f"The lettre {elements["lettre"]} was found {elements["occurences"]} times")
+    print("")
+    print("--- That's all folks ---")
 
 main()
 
