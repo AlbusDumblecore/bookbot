@@ -1,13 +1,11 @@
 def main():
     with open("books/frankenstein.txt") as f:
         file_contents = f.read()
-    print(file_contents)
     liste_mots = file_contents.split()
     counter = 0
     for i in range(0,len(liste_mots)):
        counter +=1
-    print(counter)
-    
+        
     liste_minuscule = file_contents.lower()
     listing_lettres = {}
     for mots in liste_minuscule:
@@ -16,6 +14,18 @@ def main():
                 listing_lettres[character] +=1
             else:
                 listing_lettres[character]=1
-    print(listing_lettres)
+    
+    dict_final = {}
+    for clés in listing_lettres.keys():
+        if clés.isalpha() == True:
+            dict_final[clés]=listing_lettres[clés] 
+
+    liste_finale = []
+    for clés in dict_final:        
+        liste_finale.append({clés:dict_final[clés]})
+    print (liste_finale)   
+
+
+
 main()
 
